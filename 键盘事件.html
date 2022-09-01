@@ -18,6 +18,14 @@
             // 注意：
             // 1.输入框注册键盘事件 
             // 2.整个页面注册键盘事件（body,html)
+
+            let int = document.querySelector('input');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+            int. addEventListener('keydown',function () {
+                console.log('键盘被按下了');
+            })//绑定事件
+            int. addEventListener('keyup',function () {
+                console.log('键盘被抬起了');
+            })//绑定事件
     </script>
 </body>
 </html>
