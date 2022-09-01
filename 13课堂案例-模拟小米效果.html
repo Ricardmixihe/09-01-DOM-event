@@ -82,17 +82,16 @@
         let int = document.querySelector('input');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
         let uls = document.querySelector('.result-list');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
             int. addEventListener('focus',function () {
-                int.style.border = '1px solid blue';
                 uls.style.display = 'block'
+                int.classList.add('search');
             })//绑定事件
 
-            // 2.失去焦点事件(b1ur) 
+            // 2.失去焦点事件(blur) 
             // a)将列表隐藏 
             // b)将input标签类名移除调用
             int. addEventListener('blur',function () {
-                int.style.border = '';
                 uls.style.display = 'none'
-
+                int.classList.remove('search')
             })//绑定事件
     </script>
 </body>
