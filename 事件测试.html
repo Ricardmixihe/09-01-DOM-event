@@ -14,13 +14,30 @@
     </style>
 </head>
 <body>
-    <div></div>
+    <div>文字</div>
+
+    <ul>
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+        <li>列表4</li>
+    </ul>
     <script>
         // 1.要求：点击页面中的div标签，给div设置背景颜色
-        let div = document.querySelector('div');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
-            div. addEventListener('click',function () {
-                div.style.backgroundColor = 'blue'
-            })//绑定事件
+        // let div = document.querySelector('div');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        //     div. addEventListener('click',function () {
+        //         div.style.backgroundColor = 'blue'
+        //     })//绑定事件
+        // 2.点击div，输出div标签中的文字
+        // let div = document.querySelector('div');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        // div. addEventListener('click',function () {
+        //     console.log(div.innerText); 
+        // })//绑定事件
+
+
+        // 点击li标签输出标签中的内容
+        let li = document.querySelector('.ul li');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        console.log(li.innerHTML);
     </script>
 </body>
 </html>
