@@ -38,9 +38,9 @@
         // 点击对应的li标签输出标签中的内容
         let li = document.querySelectorAll('li');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
         for (let i = 0; i < li.length; i++) {
-            li[i].onclick = function () {
-                console.log(this.innerHTML);
-            }
+            li[i].addEventListener('click',function () {
+                console.log(li[i].innerHTML);
+            })//绑定事件
         }
     </script>
 </body>
