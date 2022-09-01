@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    
+    <script>
+
+
+
+            // 1.如何在键盘事件中获取用户按下的是哪个按键？
+            // 答案：通过事件对象参数获取
+        let int = document.querySelector('input');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+            int. addEventListener('keydown',function (e) {
+                console.log(e.key);
+                console.log(e.code);
+            })//绑定事件
+    </script>
+</body>
+</html>
