@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid blue;
+
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <input type="text" >
+
+
+
+    <script>
+        //1.当标签获取到鼠标焦点的时候，触发焦点事件
+        //注意：焦点事件给输入框注册
+
+        //焦点事件名称：focus
+
+        //失去焦点事件：blur
+
+        let int = document.querySelector('input');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+            int. addEventListener('focus',function () {
+                int.style.background = 'pink';
+            })//绑定事件
+            int. addEventListener('blur',function () {
+                int.style.background = ''
+            })//绑定事件
+    </script>
+</body>
+</html>
