@@ -36,8 +36,12 @@
 
 
         // 点击li标签输出标签中的内容
-        let li = document.querySelector('.ul li');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
-        console.log(li.innerHTML);
+        let div = document.querySelector('div');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        let li = document.querySelector('ul li');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        li.addEventListener('click',function () {
+            console.log(li);
+        })//绑定事件
+        console.log(li);
     </script>
 </body>
 </html>
