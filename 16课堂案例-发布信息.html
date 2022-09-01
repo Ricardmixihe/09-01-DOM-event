@@ -120,6 +120,41 @@
         // 1.当输入框获取焦点的时候，先是统计字数标签（类名叫total）
         // 2.给输入框注册键盘事件（keyup）
         // a）点击回车 ---》在网页中创建相应的标签（通过innerHTML方式）
+
+        // 代码实现。
+
+
+
+        // 获取统计文字字数标签
+        let total = document.querySelector('.total');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        //获取输入框标签
+        let textarea = document.querySelector('#tx');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        let text = document.querySelector('.text');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        let item = document.querySelector('.item');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        //注册焦点事件
+        textarea. addEventListener('focus',function () {
+          //通过修改标签透明度实现显示效果
+          total.style.opacity = '1'
+        })//绑定事件
+        textarea. addEventListener('blur',function () {
+          //通过修改标签透明度实现消失效果
+          total.style.opacity = '0'
+        })//绑定事件
+
+
+        //给输入框注册键盘事件
+        textarea. addEventListener('keyup',function (e) {
+          //1.判断用户按下的是不是回车键
+          let msg = e.code;
+          if (msg == 'Enter') {
+            // 显示内容区域
+            item.style.display = 'block';
+            //将用户输入的内容显示到对应的标签中
+            text.innerHTML = textarea.value;
+            // 清空输入框的内容
+            textarea.value = ''
+          }
+        })//绑定事件
       </script>
 </body>
 </html>
