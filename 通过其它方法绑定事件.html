@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button"  value="按钮">
+    <script>
+        // 1.推荐使用addEventListener()方式给元素注册事件 
+        
+        // 2.除了通过addEventListener()可以给元素注册事件，还可以通过on方式给元素注册事件
+
+        // 通过on方式给元素注册事件语法： 
+        // 事件源.on事件类型=function(){)
+            // let btn = document.querySelector('input');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+            // btn.onclick = function () {
+            //     alert("hehehe")
+            // }
+
+
+        //3.为什么推荐使用addEventListener()给元素注册事件？
+        //a)使用addEventListener()给元素注册事件的时候，如果是同一个事件注册多次，addEventListener()不会覆盖
+        let btn = document.querySelector('input');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+                // btn.addEventListener('click',function () {
+                //     console.log(123);
+
+                // })//绑定事件
+                // btn. addEventListener('click',function () {
+                //     console.log(456);
+                // })//绑定事件
+                btn.onclick  = function(){
+                    console.log(123);
+                }
+                btn.onclick  = function(){
+                    console.log(456);
+                }
+
+
+    </script>
+</body>
+</html>
