@@ -54,7 +54,37 @@
     </div>
     <script>
         // 1.给开始按钮注册点击事件
+            // a)名字不断的在改变（定义一个数组，保存一些名字，反复的从数组中取值）
+            // b)将数组中不断找到的名字显示到对应的标签位置处（类名叫qs）
+        let start_btn = document.querySelector('.start');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        let end_btn = document.querySelector('.end');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        let qs = document.querySelector('.qs');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        function getRandom(min,max) {
+            return Math.floor(Math.random()*(max-min+1))+min;//或者ary.length随机Max为到最大值,最小为min
+        }
+        let ary =['王二麻子','章三','李四','王五','pink','Richard','小黄','小戴']
+        //开始按钮注册点击事件
+        let timeId ;
+        start_btn.addEventListener('click',function () {
+                timeId = setInterval(function(){
+                    // 不断地从数组中取值
+                    let i = getRandom(0,ary.length-1);
+                    // 根据索引获取名字
+                    let names = ary[i];
+                    // 将名字显示到qs标签中
+                    qs.innerHTML = names
+                },50)
+        })
 
+        
+        
+        //绑定事件
+        // 2.点击结束按钮
+            // a)停止计时器
+        end_btn. addEventListener('click',function () {
+            // 停止计时器
+            clearInterval(timeId)
+        })//绑定事件
 
     </script>
 </body>
